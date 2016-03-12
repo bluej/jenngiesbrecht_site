@@ -308,12 +308,12 @@ header .header-content .header-content-inner i {
 
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
 }
 
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-desc {
@@ -326,15 +326,15 @@ header .header-content .header-content-inner i {
 
 @media(min-width:768px) {
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-        font-size: 22px;
+        font-size: 16px;
     }
 
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-desc {
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 
@@ -537,4 +537,52 @@ ul.banner-social-buttons {
 #description > div {
     top: 45px;
     position: relative;
+}
+
+/* CSS for Read More portfolio section */
+.read-more-state {
+  display: none;
+}
+
+.read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: .25s ease;
+}
+
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+
+.read-more-state ~ .read-more-trigger:before {
+  content: 'Show more';
+}
+
+.read-more-state:checked ~ .read-more-trigger:before {
+  content: 'Show less';
+}
+
+.read-more-trigger {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 .5em;
+  /*color: #666;*/
+  font-size: .9em;
+  line-height: 2;
+  border: 1px solid #ddd;
+  border-radius: .25em;
+}
+
+/* Other style */ 
+body {
+  padding: 2%;
+}
+
+p {
+  padding: 2%;
+  color: white;
+  font-size: 12px;
 }
