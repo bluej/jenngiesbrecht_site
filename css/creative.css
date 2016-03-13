@@ -575,14 +575,3 @@ ul.banner-social-buttons {
   border: 1px solid #ddd;
   border-radius: .25em;
 }
-
-/* Other style */ 
-body {
-  padding: 2%;
-}
-
-p {
-  padding: 2%;
-  color: white;
-  font-size: 12px;
-}
